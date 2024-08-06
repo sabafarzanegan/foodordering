@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MobileNav from "../ui/MobileNav";
 
 function Header() {
   return (
@@ -9,6 +10,7 @@ function Header() {
           className="font-bold text-3xl text-orange-500 tracking-tight">
           TAPSI FOOD
         </Link>
+        <MobileNav />
       </div>
     </div>
   );

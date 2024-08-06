@@ -66,4 +66,8 @@
   body {
     @apply bg-background text-foreground;
   }
+  @font-face {
+    font-family: "vazir";
+    src: url(./assets/fonts/Vazirmatn-VariableFont_wght.ttf);
+  }
 }
