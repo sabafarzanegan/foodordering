@@ -1,7 +1,7 @@
 function Hero() {
   return (
-    <div className="bg-hero w-full h-[500px] bg-cover bg-center bg-no-repeat flex items-center justify-center">
-      <h1 className="font-vazir  text-center ">
+    <div className="bg-hero w-full h-[500px] bg-cover bg-center brightness-75 bg-no-repeat flex items-center justify-center">
+      <h1 className="font-vazir  text-center px-4">
         <p className=" text-3xl md:text-4xl lg:text-6xl font-bold text-orange-400  leading-relaxed text-wrap">
           غذای مورد علاقت رو پیدا کن
         </p>
