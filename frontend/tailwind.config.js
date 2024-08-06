@@ -75,6 +75,9 @@ module.exports = {
     fontFamily: {
       vazir: "vazir",
     },
+    backgroundImage: {
+      hero: "url(./public/image/a food fast ima 2ef6dab9-42b9-4e4d-ae61-3bc040af5c51.png)",
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };

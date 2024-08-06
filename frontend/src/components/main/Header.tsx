@@ -3,7 +3,7 @@ import MobileNav from "../ui/MobileNav";
 
 function Header() {
   return (
-    <div className="py-6 border-b-2 border-b-orange-500">
+    <div className="py-6 border-b-4 border-b-orange-500">
       <div className="container mx-auto flex items-center justify-between">
         <Link
           to="/"
