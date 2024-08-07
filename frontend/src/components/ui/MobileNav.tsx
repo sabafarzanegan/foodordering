@@ -7,8 +7,10 @@ import {
 } from "@/components/ui/sheet";
 import { FaBars } from "react-icons/fa6";
 import { Button } from "./button";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function MobileNav() {
+  const { loginWithRedirect } = useAuth0();
   return (
     <Sheet>
       <SheetTrigger>
@@ -19,7 +21,9 @@ function MobileNav() {
           خوش آمدید.لطفا ابتدا وارد شوید
         </SheetTitle>
         <SheetDescription className="flex font-bold text-white ">
-          <Button className="flex-1 bg-orange-500 hover:bg-orange-300">
+          <Button
+            onClick={async () => await loginWithRedirect()}
+            className="flex-1 bg-orange-500 hover:bg-orange-300">
             ورود
           </Button>
         </SheetDescription>
