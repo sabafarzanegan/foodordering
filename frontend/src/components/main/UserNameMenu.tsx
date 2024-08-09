@@ -14,16 +14,16 @@ function UserNameMenu() {
   const { user, logout } = useAuth0();
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className=" px-4 py-2 rounded-md flex items-center justify-center gap-x-4 font-vazir text-base md:text-xl ">
+      <DropdownMenuTrigger className=" px-4 py-2 rounded-md flex items-center justify-center gap-x-2  md:gap-x-4 font-vazir text-base md:text-xl ">
         <div>
-          <FaRegUserCircle className="text-base md:text-xl" />
+          <FaRegUserCircle className="text-sm md:text-lg text-orange-500" />
         </div>
-        <div className="font-bold text-orange-500 hover:text-orange-300 transition-all duration-75">
+        <div className="text-sm md:text-lg font-bold text-orange-500 hover:text-orange-300 transition-all duration-75">
           <p>{user?.name}</p>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="font-vazir">
-        <DropdownMenuItem className="flex items-center justify-between ">
+      <DropdownMenuContent className="font-vazir space-y-2">
+        <DropdownMenuItem className="flex items-center justify-between  ">
           <Link to="/user-profile" className="font-vazir ">
             حساب کاربری
           </Link>
