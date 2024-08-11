@@ -1,6 +1,6 @@
 import React from "react";
 import { AppState, Auth0Provider, useAuth0, User } from "@auth0/auth0-react";
-import { useCreateMyUser } from "./api/userapi";
+import { useCreateMyUser } from "../api/userapi";
 import { useNavigate } from "react-router-dom";
 
 type props = {
