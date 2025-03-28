@@ -1,23 +1,17 @@
 import products from "@/assets/data/products";
-import { StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import ProductCard from "./ProductCard";
 
 function ProductsListItem() {
   return (
-    <View style={styles.productsContainer}>
-      {products.map((item) => (
-        <ProductCard product={item} key={item.id} />
-      ))}
-    </View>
+    <FlatList
+      data={products}
+      renderItem={({ item }) => <ProductCard product={item} />}
+      numColumns={2}
+      contentContainerStyle={{ gap: 10, padding: 10 }} //between column
+      columnWrapperStyle={{ gap: 10 }} //between product item
+    />
   );
 }
 
 export default ProductsListItem;
-
-const styles = StyleSheet.create({
-  productsContainer: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10",
-  },
-});
