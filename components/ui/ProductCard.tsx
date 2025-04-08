@@ -1,19 +1,27 @@
 import { Product } from "@/assets/types";
 import Colors from "@/constants/Colors";
+import { Link } from "expo-router";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <View style={styles.container}>
-      <Image
-        source={{ uri: product.image as string }}
-        style={styles.image}
-        resizeMode="contain"
-      />
-      <Text style={styles.title}>{product.name}</Text>
-      <Text style={styles.price}>{product.price}$</Text>
-    </View>
+    <Link
+      href={{
+        pathname: "/(tabs)/menu/[id]",
+        params: { id: product.id.toString() },
+      }}
+      asChild>
+      <Pressable style={styles.container}>
+        <Image
+          source={{ uri: product.image as string }}
+          style={styles.image}
+          resizeMode="contain"
+        />
+        <Text style={styles.title}>{product.name}</Text>
+        <Text style={styles.price}>{product.price}$</Text>
+      </Pressable>
+    </Link>
   );
 }
 
